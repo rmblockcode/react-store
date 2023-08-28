@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import { ShoppingCardContext } from '../../Context'
+import { ShoppingCartContext } from '../../Context'
 import Layout from '../../Components/Layout'
 import Card from '../../Components/Card'
 import ProductDetail from '../../Components/ProductDetail'
 
 function Home() {
-  const context = useContext(ShoppingCardContext)
+  const context = useContext(ShoppingCartContext)
 
   const renderView = () => {
     if (context.filteredItems?.length > 0) {
