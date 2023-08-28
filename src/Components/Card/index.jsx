@@ -2,10 +2,10 @@
 import { PlusIcon, CheckIcon } from '@heroicons/react/24/solid'
 
 import { useContext } from 'react'
-import { ShoppingCardContext } from '../../Context'
+import { ShoppingCartContext } from '../../Context'
 
 const Card = ({ data }) => {
-    const context = useContext(ShoppingCardContext)
+    const context = useContext(ShoppingCartContext)
 
     const showProduct = (productDetail) => {
         context.openProductDetail()
@@ -50,7 +50,7 @@ const Card = ({ data }) => {
                 <img className='w-full h-full object-cover rounded-lg' src={data.images[0]} alt={data.title} />
                 {renderIcon(data.id)}
             </figure>
-            <p className='flex justify-between'>
+            <p className='flex justify-between items-center'>
                 <span className='text-sm font-light'>{data.title}</span>
                 <span className='text-lg font-medium'>${data.price}</span>
             </p>
